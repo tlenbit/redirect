@@ -16,6 +16,8 @@ RUN pip install -U pipenv
 RUN pipenv install --system
 
 COPY . .
+RUN python manage.py migrate
+RUN python manage.py initadmin
 RUN python manage.py loaddata fixture
 
 EXPOSE 80
