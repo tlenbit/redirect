@@ -27,10 +27,11 @@ DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
+GEOIP_PATH = os.path.join(BASE_DIR, 'geoip')
 
 # Application definition
 
-INSTALLED_APPS = [
+DJANGO_APPS = [
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -38,6 +39,12 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
 ]
+
+APPS = [
+    'redirect_app'
+]
+
+INSTALLED_APPS = DJANGO_APPS + APPS
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
