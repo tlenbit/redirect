@@ -1,0 +1,10 @@
+version: '3'
+
+services:
+  django:
+    build:
+      context: .
+      dockerfile: ./Dockerfile
+    image: redirect
+    ports:
+      - "80:80"
