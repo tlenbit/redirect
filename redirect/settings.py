@@ -29,6 +29,10 @@ ALLOWED_HOSTS = ["*"]
 
 GEOIP_PATH = os.path.join(BASE_DIR, 'geoip')
 
+FIXTURE_DIRS = [
+   os.path.join(BASE_DIR, 'fixtures')
+]
+
 # Application definition
 
 DJANGO_APPS = [
